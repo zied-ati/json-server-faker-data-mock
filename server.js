@@ -2,7 +2,7 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5010;
 var db = require('./db.json');
 
 server.use(jsonServer.bodyParser);
@@ -54,7 +54,7 @@ server.get('/get/transaction', (req, res) => {
       }
     } else {
       res.status(400).jsonp({
-        error: "No valid transactionId"
+        error: "No valid Transaction Id"
       });
     }
   }

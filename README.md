@@ -2,5 +2,10 @@ A sample of mocking json server rendering fake transactions to be used in the in
 
 Run server:
 ```sh
-$ json-server --watch db.json
+$ json-server --watch db.json --port=5010
+```
+
+Run server with faker generated data:
+```sh
+$ json-server generate-data.js --port=5010
 ```
